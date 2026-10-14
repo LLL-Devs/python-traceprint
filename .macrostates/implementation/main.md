@@ -1,0 +1,35 @@
+# Implementation
+
+Project phase: active
+
+Traceprint is an MIT-licensed Python library for readable print and logging
+output. The public distribution is python-traceprint and imports remain traceprint.
+The initial snapshot uses specs-1.0.0 and imp-1.0.0; the independent library version
+is 0.1.2, with an alpha API. deliverables.yaml owns its version and tagged source.
+Publication is proven by external release files, not by a declaration alone.
+
+## Architecture
+
+src/traceprint/tracer.py owns formatting, labels, depth, explicit stream interception
+and logging integration. Metadata is added once per nonblank line while partial
+writes appear immediately. Indentation is independent of ANSI colors. Timestamps
+are UTC; durations use perf_counter. File output strips terminal escapes.
+
+Importing traceprint never installs process streams. Callers install/uninstall
+explicitly and own file-handler cleanup. Context is shared mutable tracer state,
+not isolated by thread or async task. The decorator wraps synchronous calls.
+
+hatch_build.py validates the independent version declaration without Git, network
+or installed specs. Source and wheel artifacts include MIT licensing; the wheel
+includes py.typed and has no runtime dependencies. docs/ contains Sphinx autodoc,
+usage and release guides. CI checks Linux Python 3.12–3.15 and Windows/macOS 3.12,
+quality, docs and artifacts; Pages deploys docs, and release.yml publishes via OIDC.
+
+## Verification and provenance
+
+Use the commands in CONTRIBUTING.md. Macrostates CLI 0.5.0 checks package metadata
+and locked upstream integrity. Semantic review, tests, artifact checks and remote
+CI supply separate evidence. Native initial-bootstrap review and baseline provenance
+are recorded in workflows/history/2026-10-14__16CBH1__initial-publication.md.
+Private development origins and historical records remain in a private archive;
+public Git starts from the reviewed snapshot rather than claiming that ancestry.

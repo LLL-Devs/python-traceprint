@@ -1,0 +1,19 @@
+# Python/local environment
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+uv.lock
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+docs/_build/
+
+# Temporary workspace
+/tmp/*
+!/tmp/.gitkeep

@@ -1,0 +1,18 @@
+name: traceprint
+version: 1.0.0
+versioned_at: 2026-10-14 13:17
+description: Traceprint-specific behavior for readable print and logging traces.
+entrypoint: README.md
+dependencies:
+- name: meta
+  version: 2.2.0
+  constraint: at_least
+- name: process
+  version: 5.0.0
+  constraint: at_least
+- name: repository-1
+  version: 4.0.0
+  constraint: at_least
+- name: python-library-1
+  version: 2.0.0
+  constraint: at_least
