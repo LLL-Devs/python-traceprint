@@ -1,0 +1,32 @@
+schema_version: 1
+id: traceprint-specification-integration-20261015
+summary: Prepare reviewed integration of the Traceprint specification expansion.
+origin:
+  commit: 6e5d9ab13dca1f95a6f985a9d8167c9472932f68
+  specification: specs-1.0.0
+  implementation: imp-1.0.0
+impact:
+  specification: none
+  implementation: none
+deliverables: []
+requirements:
+- requirement: Prepare the specification expansion for protected-main PR integration
+    without publishing unchanged library behavior again.
+  implementation: Preserve the local package 1.1.0 selection, feature minor/none impact
+    record and all published baseline/library declarations; add an Unreleased changelog
+    entry and a CLI-readable field for existing historical closure evidence.
+  verification: Fetched origin/main at 6e5d9ab13dca1f95a6f985a9d8167c9472932f68; inspected
+    all seven required checks and zero required approving reviews; 41 tests, 18
+    executable specification case groups, 67 local links/anchors, eight ordered
+    filenames, Macrostates check/change-check, Ruff lint/format, Pyright and strict
+    Sphinx HTML pass. Exact committed-tree validation follows closure before
+    submission; all protected external checks gate merge.
+evidence:
+- Inspected fetched main, complete local scope, independent version policy and protected-branch
+  requirements; published library and baseline declarations preserved.
+- Macrostates, tests, executable specification cases, links, reading order, Ruff,
+  Pyright and strict Sphinx checks passed for the initial prepared scope. Refreshed
+  documentation, link and metadata checks pass after the maintainer-content cleanup.
+  Explicit closure and protected external checks remain separate gates.
+gaps: []
+work: traceprint-specification-integration-20261015

@@ -1,0 +1,43 @@
+schema_version: 1
+id: traceprint-specification-detail-20261014
+summary: Expand the Traceprint specifications into a detailed existing-behavior reconstruction
+  contract.
+origin:
+  commit: 6e5d9ab13dca1f95a6f985a9d8167c9472932f68
+  specification: specs-1.0.0
+  implementation: imp-1.0.0
+impact:
+  specification: minor
+  implementation: none
+deliverables:
+- traceprint
+requirements:
+- requirement: Reconstruct the existing public runtime from authoritative specifications,
+    without using product docs as a competing authority.
+  implementation: Expanded exact public interface/defaults, formatting, line/stream/filter
+    semantics, contexts, logging/files/mixin and alpha boundaries; runtime and product
+    behavior unchanged; root README release-policy link follows the renamed owner.
+  verification: Source-to-owner review of every method/helper and five public signature/default
+    comparisons; 27 constructor/method/property inventory entries covered.
+- requirement: Provide deterministic conformance examples and distinguish unsupported
+    alpha observations from intended behavior.
+  implementation: 52 named acceptance scenarios and conditional observed-compatibility
+    annex; implementation review records unresolved future design choices.
+  verification: 18 groups of executable specification/profile observations pass on
+    Python 3.12.15, including literal palettes, frozen clocks, labels, fragments,
+    filters, contexts, logging/mixin, files, import environment and build errors.
+- requirement: Retain existing requirements, release/bootstrap policy and usable independent
+    package reading routes.
+  implementation: Substantive clauses preserved; original-to-expanded requirement and
+    filename maps; all eight core topics use consecutive three-digit prefixes, with
+    affected references updated; package/selection/entrypoint advance consistently to 1.1.0.
+  verification: Package integrity/metadata checks, 67 local links/anchors and all eight
+    consecutive core filenames/reading-order positions valid, source
+    diff review; bounded initial-baseline compatibility and published declarations retained.
+evidence:
+- Macrostates check, source-to-contract review, five signature/default comparisons,
+  67 Markdown link/anchor and eight-topic filename/reading-order checks and 18 groups of executable specification
+  cases/profile observations pass; runtime and published provenance are unchanged.
+  Maintainer documentation receives a separate editorial refresh.
+gaps: []
+work: traceprint-specification-detail-20261014

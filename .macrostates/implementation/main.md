@@ -10,6 +10,13 @@ Publication is proven by external release files, not by a declaration alone.
 
 ## Architecture
 
+The authoritative product contract is the local
+[Traceprint specification package](../specs/900_traceprint/README.md), including
+its interface, formatting, stream, context, logging and acceptance owners.
+Sphinx documentation is a product derived from the library, not a competing
+specification. The [specification reconstruction review](specification-review.md)
+records source coverage and observed alpha boundaries separately.
+
 src/traceprint/tracer.py owns formatting, labels, depth, explicit stream interception
 and logging integration. Metadata is added once per nonblank line while partial
 writes appear immediately. Indentation is independent of ANSI colors. Timestamps
@@ -29,7 +36,5 @@ quality, docs and artifacts; Pages deploys docs, and release.yml publishes via O
 
 Use the commands in CONTRIBUTING.md. Macrostates CLI 0.5.0 checks package metadata
 and locked upstream integrity. Semantic review, tests, artifact checks and remote
-CI supply separate evidence. Native initial-bootstrap review and baseline provenance
+CI supply separate evidence. Initial baseline review and release provenance
 are recorded in workflows/history/2026-10-14__16CBH1__initial-publication.md.
-Private development origins and historical records remain in a private archive;
-public Git starts from the reviewed snapshot rather than claiming that ancestry.

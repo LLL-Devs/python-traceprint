@@ -89,7 +89,7 @@ task contexts or distributed tracing.
 - [API reference](docs/api.rst): generated signatures and public methods.
 - [Contributing](CONTRIBUTING.md): setup, checks and building HTML documentation.
 - [Changelog](CHANGELOG.md): changes awaiting release.
-- [Release preparation](docs/releasing.rst): PyPI account setup and release gates.
+- [Maintainer releases](docs/releasing.rst): versioning, validation and publishing.
 - [Transformer example](examples/sklearn_style_transformer.py): a scikit-learn-style
   transformer with empty stand-in base classes; scikit-learn is not required.
 - [Main-loop example](examples/main_loop.py): logging and nested labels.
@@ -123,7 +123,7 @@ Specifications and implementation records live under `.macrostates/`. The
 development environment pins Macrostates CLI 0.5.0. The distribution version has
 its own authority in `.macrostates/implementation/deliverables.yaml`, independent
 of the initial `specs-1.0.0` and `imp-1.0.0` repository baselines. See the
-[release policy](.macrostates/specs/900_traceprint/release.md).
+[release policy](.macrostates/specs/900_traceprint/007_release.md).
 
 The local GitHub Actions workflow checks tests across Python 3.12–3.15 on Linux
 and Python 3.12 on Windows and macOS, plus lint, types, documentation and package

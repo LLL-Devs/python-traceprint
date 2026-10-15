@@ -45,7 +45,7 @@ packages:
     repository: https://github.com/Macrostates/macrostates-python-library-1.git
     tag: v2.0.0
 - name: traceprint
-  version: 1.0.0
+  version: 1.1.0
   path: 900_traceprint/
   entrypoint: README.md
   source:
