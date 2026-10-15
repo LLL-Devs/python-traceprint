@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Expand the authoritative Macrostates specifications with detailed behavior,
+  acceptance scenarios and consistent reading-order filenames.
+- Refresh maintainer release guidance and remove conversation-specific setup notes
+  from project documentation and process records.
+
 ## 0.1.2 — 2026-10-14
 
 First standalone public alpha release.

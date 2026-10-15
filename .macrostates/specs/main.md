@@ -2,11 +2,11 @@
 
 This file composes the specification packages that define Traceprint.
 
-The initial standalone public snapshot declares `specs-1.0.0` and `imp-1.0.0`.
-The library version is independent: `python-traceprint` 0.1.2, with an alpha API.
+The finalized repository baselines are `specs-1.0.0` and `imp-1.0.0`.
+The independent published library is `python-traceprint` 0.1.2, with an alpha API.
 See [implementation](../implementation/main.md) and the
-[local release policy](900_traceprint/release.md) for initial-publication review,
-provenance and release verification. Declarations alone do not prove a PyPI upload.
+[local release policy](900_traceprint/007_release.md) for release preparation,
+provenance and verification. Declarations alone do not prove a PyPI upload.
 
 ## Specification packages
 
@@ -17,7 +17,7 @@ This project uses:
 - `repository-1`, version `4.0.0`, at `010_repository-1/`.
 - `python-1`, version `2.1.1`, at `020_python-1/`.
 - `python-library-1`, version `2.0.0`, at `031_python-library-1/`.
-- `traceprint`, version `1.0.0`, at `900_traceprint/`.
+- `traceprint`, version `1.1.0`, at `900_traceprint/`.
 
 All specifications live under `.macrostates/specs/`. The five upstream packages
 are unmodified Git archive snapshots of published Macrostates release tags, selected in the

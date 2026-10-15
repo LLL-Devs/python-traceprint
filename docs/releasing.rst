@@ -1,26 +1,40 @@
-Release preparation
+Maintainer releases
 ===================
 
 The library is alpha and uses independent distribution versions. Repository
 baselines are separately tagged with ``specs-*`` and ``imp-*``. The Python distribution
 is ``python-traceprint``; its import is ``traceprint`` and license is MIT.
 
-PyPI account setup
-------------------
+Release preparation
+-------------------
 
-Verify your account email, enable two-factor authentication and save recovery
-codes. PyPI requires two-factor authentication; its
-`account help <https://pypi.org/help/#twofa>`_ explains setup.
+Follow the repository's
+`release policy <https://github.com/LLL-Devs/python-traceprint/blob/main/.macrostates/specs/900_traceprint/007_release.md>`_
+and Macrostates review/closure gates. The authoritative distribution version is
+``deliverables.traceprint.version`` in
+``.macrostates/implementation/deliverables.yaml``. Repository baseline changes
+alone do not require another Python package release.
 
-For the initial release, open
-`Publishing <https://pypi.org/manage/account/publishing/>`_ in your PyPI account
-and add a pending GitHub Trusted Publisher using:
+For a package release, assign an unused PEP 440 version according to API impact,
+update the changelog, and record the exact specification/implementation baselines,
+release date and immutable source tag. Preserve earlier release provenance.
+Complete the reviewed integration into ``main`` before publishing.
+
+Run the checks in ``CONTRIBUTING.md``, including supported-platform tests, lint,
+formatting, types, strict documentation, source/wheel builds and isolated-wheel
+checks. Validate distribution metadata with ``uv run twine check --strict dist/*``.
+
+Publishing configuration
+------------------------
+
+``.github/workflows/release.yml`` uses GitHub-to-PyPI Trusted Publishing with OIDC.
+Its publisher configuration is:
 
 .. list-table::
    :header-rows: 1
 
    * - Field
-     - Planned value
+     - Configured value
    * - PyPI project name
      - ``python-traceprint``
    * - GitHub owner
@@ -32,25 +46,24 @@ and add a pending GitHub Trusted Publisher using:
    * - GitHub environment
      - ``pypi``
 
-The publishing workflow is ``.github/workflows/release.yml`` and the GitHub
-environment is ``pypi``. It runs on a published GitHub release, verifies the
-annotated tag and source, builds/checks the artifacts, then uploads with OIDC. The existing ``ci.yml`` verifies code; it does not publish. Trusted
-Publishing uses short-lived OIDC credentials, so a stored PyPI API token is not
-needed. The first authorized upload creates the project. A pending publisher
-does not reserve the name; recheck availability before publication. See PyPI's
-`new-project instructions <https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/>`_.
+The separate ``ci.yml`` workflow validates changes. The publishing workflow has
+an artifact-building job and a separate upload job in the ``pypi`` environment;
+the upload uses a short-lived OIDC credential rather than a stored PyPI API token.
 
-Before publishing
------------------
+Publication and verification
+----------------------------
 
-Follow the local library release policy and Macrostates review/closure gates.
-Finalize the clean source history and applicable repository baselines, decide
-the public API version deliberately and update the independent declaration in
-``.macrostates/implementation/deliverables.yaml``. Verify that the chosen version
-has not already been uploaded. Record immutable source provenance.
+Create an annotated ``v<version>`` tag for the exact integrated release commit.
+The declared baseline tags must be annotated ancestors, with the specification
+snapshot and implementation declaration matching the release policy. Published
+tags and distribution versions are immutable.
 
-Run tests on supported platforms and Python versions, lint, formatting, type
-checks, strict documentation builds, source and wheel builds, metadata validation
-and isolated installed-wheel checks. Update the changelog for the actual release.
-Only the later authorized publishing step should create tags or upload packages;
-an ordinary build never does so.
+Publishing a GitHub release for that tag triggers the workflow. Its build job
+verifies tag/source provenance and closed workflows, runs tests, builds the
+source and wheel artifacts, and checks metadata and isolated installation. The
+upload job publishes those verified artifacts to PyPI.
+
+Confirm that both jobs succeeded, the expected files are available on PyPI, and
+their hashes match the verified build artifacts. Verify installation from PyPI
+in an isolated environment. A release declaration or GitHub release page alone
+does not establish a successful upload. Ordinary builds never tag or publish.
