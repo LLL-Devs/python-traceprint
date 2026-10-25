@@ -72,8 +72,7 @@ neutral technical evidence; existing historical bytes are preserved.
 
 ## Candidate qualification
 
-Prepared the bound candidate from upgrade commit `95c2cc3` against freshly fetched
-origin/main `76d2f86`. The plan proposes specs-2.0.0 / imp-2.0.0 and preserves
+Prepared the candidate against freshly fetched origin/main `76d2f86`. The plan proposes specs-2.0.0 / imp-2.0.0 and preserves
 all earlier consumed record hashes. Library 0.1.4 has independent provenance
 and tag v0.1.4. The declaration is a release candidate until reviewed integration;
 its status field alone does not establish an upload.
@@ -92,3 +91,14 @@ public document contract. Necessary public upstream provenance and legal notices
 remain accurate; existing historical records were not rewritten. There are no
 other independently composed or vendored package contexts in the tracked project
 requiring an update suggestion. Local private backup trees are outside scope.
+
+## Candidate consistency correction
+
+The exact candidate check rejected finalizing CHANGELOG.md after the plan's
+source snapshot: CLI 0.6.0 permits release metadata and workflow updates after
+planning, but requires root changelog content in the original planned tree.
+Returned the change unchanged to pending state and restored the original baseline
+and historical plan declarations without rewriting commits. Final release notes
+remain in the new pre-plan source, which is then replanned and prepared normally.
+This correction does not change impact, API, requirements or successful artifact
+results. No release identities were published during the rejected preparation.

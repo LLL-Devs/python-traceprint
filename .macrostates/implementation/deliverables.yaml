@@ -3,10 +3,7 @@ deliverables:
   traceprint:
     strategy: independent
     version_scheme: pep440
-    version: 0.1.4
-    status: released
-    specification: specs-2.0.0
-    implementation: imp-2.0.0
-    release_date: '2026-10-25'
-    source:
-      tag: v0.1.4
+    version: 0.1.4.dev0
+    status: development
+    specification: specs-1.1.0
+    implementation: imp-1.1.0
