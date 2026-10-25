@@ -2,8 +2,8 @@
 
 Project phase: active
 Workflow type: Implementation amendment
-Status: in_progress
-Delivery state: awaiting_acceptance
+Status: completed
+Delivery state: accepted
 Change depth: medium
 Branch: fix/emudhra-toolchain
 Requested by: Lucas Lopez (713375+lucaslopez@users.noreply.github.com) - Obtained from repository Git configuration
@@ -55,3 +55,25 @@ The user explicitly authorized closing the open workflows once work finishes,
 and preparing a PR, pushing, merging and publishing the package. Closure will be
 applied after the release candidate's applicable local checks. No public API or
 product specification change is needed for the toolchain repair.
+
+## Completed local delivery
+
+Updated at: 2026-10-25 01:41 UTC. All 41 tests, Ruff lint/format,
+Pyright, strict Sphinx, Macrostates 0.5.0 check/change-check, offline source/wheel
+builds, strict Twine and isolated wheel/examples checks pass. The wheel is built
+from the source distribution. Candidate version 0.1.3 is unused on PyPI.
+
+The bound release plan collects four pending records and proposes specs-1.1.0 /
+imp-1.1.0. Historical origin and consumed record bytes are preserved. No runtime
+or public API change was made; no additional product specification update is
+needed. Baseline summary links now point to authoritative declarations.
+
+The user's instruction authorizes closure after finishing and PR/push/merge/package
+publication. Local implementation and preparation are finished; this record is
+closed under that authorization. Hosted checks, reviewed integration and upload
+are subsequent authorized operations whose receipts belong in GitHub/PyPI.
+
+Remaining implementation work: none. The earlier progress lists are historical;
+external CI, merge and publication are pending at closure.
+
+- Closure authorized by: Lucas Lopez — explicit current-session instruction to close open workflows when finished and prepare PR, push, merge and publish.

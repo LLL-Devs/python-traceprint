@@ -4,8 +4,9 @@ Project phase: active
 
 Traceprint is an MIT-licensed Python library for readable print and logging
 output. The public distribution is python-traceprint and imports remain traceprint.
-The initial snapshot uses specs-1.0.0 and imp-1.0.0; the independent library version
-is 0.1.2, with an alpha API. deliverables.yaml owns its version and tagged source.
+The release candidate uses specs-1.1.0 and imp-1.1.0; the independent library
+version is 0.1.3, with an alpha API. deliverables.yaml owns its version and tagged
+source. Reviewed integration finalizes these declarations.
 Publication is proven by external release files, not by a declaration alone.
 
 ## Architecture
