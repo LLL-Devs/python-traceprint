@@ -4,9 +4,9 @@ Project phase: active
 
 Traceprint is an MIT-licensed Python library for readable print and logging
 output. The public distribution is python-traceprint and imports remain traceprint.
-The release candidate uses specs-1.1.0 and imp-1.1.0; the independent library
-version is 0.1.3, with an alpha API. deliverables.yaml owns its version and tagged
-source. Reviewed integration finalizes these declarations.
+The composition and release.yaml declare the repository baselines;
+deliverables.yaml owns the independent library version and source provenance.
+The public API remains alpha. Reviewed integration finalizes release candidates.
 Publication is proven by external release files, not by a declaration alone.
 
 ## Architecture
@@ -39,7 +39,10 @@ v1.14.3 publishing action. CONTRIBUTING.md describes environment recovery.
 
 ## Verification and provenance
 
-Use the commands in CONTRIBUTING.md. Macrostates CLI 0.5.0 checks package metadata
-and locked upstream integrity. Semantic review, tests, artifact checks and remote
+Use the commands in CONTRIBUTING.md. Macrostates CLI 0.6.0 checks package metadata
+and locked upstream integrity. Process 6 governs public document authoring and
+role attribution for new retained material. Historical records retain their
+original byte bindings; package adoption does not rewrite them.
+Semantic review, tests, artifact checks and remote
 CI supply separate evidence. Initial baseline review and release provenance
 are recorded in workflows/history/2026-10-14__16CBH1__initial-publication.md.

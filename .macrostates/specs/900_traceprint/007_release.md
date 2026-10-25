@@ -125,7 +125,7 @@ the specification integrity lock is tracked independently.
 ## Verification and repository products
 
 Development tooling includes pytest, pytest-cov, Ruff, Pyright, Hatchling, PyYAML
-and YAML typing support, Sphinx and Twine. Pin Macrostates CLI 0.5.0 in the dev
+and YAML typing support, Sphinx and Twine. Pin Macrostates CLI 0.6.0 in the dev
 group for this selected composition. Existing minima are pytest 8, pytest-cov 5,
 Ruff 0.6, Pyright 1.1, Sphinx 8.2 and Twine 6.1; installing current compatible
 tools does not make them runtime dependencies. Ruff uses line length 88, Python

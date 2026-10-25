@@ -125,7 +125,7 @@ uv build
 The canonical repository is
 [LLL-Devs/python-traceprint](https://github.com/LLL-Devs/python-traceprint).
 Specifications and implementation records live under `.macrostates/`. The
-development environment pins Macrostates CLI 0.5.0. The distribution version has
+development environment pins Macrostates CLI 0.6.0. The distribution version has
 its own authority in `.macrostates/implementation/deliverables.yaml`, independent
 of the initial `specs-1.0.0` and `imp-1.0.0` repository baselines. See the
 [release policy](.macrostates/specs/900_traceprint/007_release.md).

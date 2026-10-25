@@ -16,16 +16,16 @@ provenance and verification. Declarations alone do not prove a PyPI upload.
 This project uses:
 
 - `meta`, version `3.0.0`, at `000_meta/`.
-- `process`, version `5.1.0`, at `001_process/`.
+- `process`, version `6.0.0`, at `001_process/`.
 - `repository-1`, version `4.0.0`, at `010_repository-1/`.
 - `python-1`, version `2.1.1`, at `020_python-1/`.
 - `python-library-1`, version `2.0.0`, at `031_python-library-1/`.
-- `traceprint`, version `1.1.0`, at `900_traceprint/`.
+- `traceprint`, version `1.1.1`, at `900_traceprint/`.
 
 All specifications live under `.macrostates/specs/`. The five upstream packages
 are unmodified Git archive snapshots of published Macrostates release tags, selected in the
 composition and verified against [composition.lock.yaml](composition.lock.yaml).
-Traceprint's own package is local. Macrostates CLI 0.5.0 is pinned in the development
+Traceprint's own package is local. Macrostates CLI 0.6.0 is pinned in the development
 dependency group; `uv run macrostates check` checks selection and integrity.
 
 ## Authority

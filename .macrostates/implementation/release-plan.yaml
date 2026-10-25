@@ -1,14 +1,17 @@
 schema_version: 1
 status: candidate
-target_commit: 28b6150c78025c998e0d4a6db1f33a4b47025015
-target_tree: ed2976a213d867925dfb6746f818c43d52752af6
+target_commit: e34d63bce0a7abca6f1c9264f0d5f6271500748e
+target_tree: 74769f169b5944076178378054d5293f08f72ea9
 integration_ref: origin/main
-integration_target: 92072928c35016e404afb84d49ef9f1486d0e17c
+integration_target: 76d2f868f5e4aa7780f81307c6d2c6184d70b0c9
 baselines:
-  specification: specs-1.0.0
-  implementation: imp-1.0.0
-  implementation_specification: specs-1.0.0
+  specification: specs-1.1.0
+  implementation: imp-1.1.0
+  implementation_specification: specs-1.1.0
 records:
+- id: macrostates-upgrade-20261025
+  sha256: 8f3990aec9e68a46731339c9a17f9e7c3c537fb01db37748f2c23a61a14b801b
+history_records:
 - id: emudhra-toolchain-20261025
   sha256: 43c457d11aa5f0b90c937c2d518196c82857bcb60ba19b2a11364735380b80a8
 - id: public-maintainer-documentation-20261015
@@ -17,17 +20,16 @@ records:
   sha256: f10b6ee20e559f54402a447fa55c0dcf48d56dacd3dd29d3d74282585e2c3b24
 - id: traceprint-specification-integration-20261015
   sha256: 12a0a984f6e9ed11f3243e9d84ffce793967a265512892250fecb1c9785b01b9
-history_records: []
 declarations:
-  composition_sha256: 75da147548c6f95f0e71f8d97bd22ca2c81897a8e73dcc206a08752407c0e894
-  release_sha256: 9a7ae62e6bcd49cbca74d444c6760137030bc49db3033a72637f814459a58a9e
+  composition_sha256: feebfc5586ccce5bc6f2d3c293cc072bdba4d71a88262f57b3443c7128c79ea1
+  release_sha256: 161536caf1992c2b56d5013fa389813cb1a28a399815dda8462344eef60fa99b
 candidate:
-  specification: specs-1.1.0
-  implementation: imp-1.1.0
-  implementation_specification: specs-1.1.0
+  specification: specs-2.0.0
+  implementation: imp-2.0.0
+  implementation_specification: specs-2.0.0
 impact:
-  specification: minor
-  implementation: patch
+  specification: major
+  implementation: major
 deliverables:
 - traceprint
 release_date: '2026-10-25'
