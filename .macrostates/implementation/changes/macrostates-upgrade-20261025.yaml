@@ -1,0 +1,45 @@
+schema_version: 1
+id: macrostates-upgrade-20261025
+summary: Adopt Process 6 public document authoring and Macrostates CLI 0.6.0.
+origin:
+  commit: 76d2f868f5e4aa7780f81307c6d2c6184d70b0c9
+  specification: specs-1.1.0
+  implementation: imp-1.1.0
+impact:
+  specification: major
+  implementation: major
+deliverables:
+- traceprint
+requirements:
+- requirement: Adopt the latest published selected packages with canonical tagged provenance.
+  implementation: Process 6.0.0 is installed from its annotated upstream tag and bound in
+    composition.lock.yaml; the other four upstream selections remain current.
+  verification: Macrostates CLI 0.6.0 check passes after canonical archive installation; upstream
+    tag identities were checked for all five packages.
+- requirement: New retained documents use neutral technical objectives and role attribution
+    under Process 6.
+  implementation: The scoped workflow and change record use roles, repository-relative paths
+    and technical evidence. Historical hash-bound records remain unchanged; adoption does
+    not authorize legacy cleanup.
+  verification: Reviewed new authored content and upstream public-document acceptance cases;
+    checked structured fields, links and evidence scope before serialization. No automatic
+    anonymity certification is claimed.
+- requirement: Pin a CLI that supports the effective Process 6 contract.
+  implementation: pyproject.toml and uv.lock select macrostates-cli 0.6.0; local release requirements
+    and current documentation agree.
+  verification: Locked development sync and Macrostates structure/integrity checks pass with
+    CLI 0.6.0.
+- requirement: Preserve the library API and prepare an independently versioned library patch
+    release.
+  implementation: Library source, runtime dependencies and API specifications are unchanged;
+    the deliverable version remains independent of repository baselines.
+  verification: All 41 tests pass on Linux Python 3.12.15; Ruff lint and formatting, Pyright
+    and strict Sphinx HTML build pass. Candidate source/wheel checks follow release preparation.
+evidence:
+- '2026-10-25: Macrostates 0.6.0 check and change-check passed; canonical Process v6.0.0 resolves
+  to 6e60e9ea636784ea951acbd4a43f98bbed2b079e.'
+- '2026-10-25: pytest: 41 passed on Linux Python 3.12.15; Ruff lint/format, Pyright and strict
+  Sphinx HTML build passed.'
+- PyPI metadata confirms macrostates-cli 0.6.0 is latest and python-traceprint 0.1.4 is unused.
+  Hosted matrix and publication checks remain subsequent gates.
+gaps: []

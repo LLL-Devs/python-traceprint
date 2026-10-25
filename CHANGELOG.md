@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Adopt Macrostates Process 6.0.0 and CLI 0.6.0. New documents use neutral
+  technical summaries and role attribution under the public document contract.
+- Prepare library 0.1.4 against the new repository baselines. Runtime behavior,
+  public imports and the standard-library-only dependency policy are unchanged.
+
 ## 0.1.3 — 2026-10-25
 
 - Mitigate the eMudhra/emSign CA incident in development and CI: require patched

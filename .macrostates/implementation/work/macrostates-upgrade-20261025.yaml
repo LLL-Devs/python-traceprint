@@ -1,0 +1,6 @@
+schema_version: 1
+id: macrostates-upgrade-20261025
+origin:
+  commit: 76d2f868f5e4aa7780f81307c6d2c6184d70b0c9
+  specification: specs-1.1.0
+  implementation: imp-1.1.0

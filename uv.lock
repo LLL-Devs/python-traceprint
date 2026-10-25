@@ -495,14 +495,14 @@ wheels = [
 
 [[package]]
 name = "macrostates-cli"
-version = "0.5.0"
+version = "0.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9f/40/3f8068361618cb6b079e3bdbdac66b956f366ff709e1ad83ffa2560e1bfc/macrostates_cli-0.5.0.tar.gz", hash = "sha256:9d305fa0f876e1c9c3a974f163cc49919e86c46877270069a6e38ae5377692fa", size = 63404, upload-time = "2026-10-13T22:31:16.444Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d2/e4/1b8c543647879b28adb9050ab8f14b32e96ab4cb66de6d8de092d64faf11/macrostates_cli-0.6.0.tar.gz", hash = "sha256:1bcc1dd2c7409bf118c6e84689a90cd34841472e414157f93d2b78ded21a8e89", size = 63994, upload-time = "2026-10-25T11:04:05.833Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/6d/51/d33cf435b570e022717f41af50338109579743072a160f68fac8518731a5/macrostates_cli-0.5.0-py3-none-any.whl", hash = "sha256:38f0e7401c0acda3bcce5875e6de0eb6a0eee52b4693840c2b3e0eacb74b3688", size = 68174, upload-time = "2026-10-13T22:31:15.164Z" },
+    { url = "https://files.pythonhosted.org/packages/9a/fc/c0227a669c0ab21ee1ca6d14aec4ec4d7af3e783bee66511afdc87db7edb/macrostates_cli-0.6.0-py3-none-any.whl", hash = "sha256:7dced4408726468322903fe33ed49c77e39fc6a5233d541030ed3938b6483518", size = 68504, upload-time = "2026-10-25T11:04:04.468Z" },
 ]
 
 [[package]]
@@ -804,7 +804,7 @@ dev = [
 dev = [
     { name = "certifi", specifier = ">=2026.10.19" },
     { name = "hatchling", specifier = ">=1.27" },
-    { name = "macrostates-cli", specifier = "==0.5.0" },
+    { name = "macrostates-cli", specifier = "==0.6.0" },
     { name = "pyright", specifier = ">=1.1" },
     { name = "pytest", specifier = ">=8.0" },
     { name = "pytest-cov", specifier = ">=5.0" },
