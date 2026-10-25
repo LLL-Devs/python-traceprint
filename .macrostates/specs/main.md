@@ -2,8 +2,11 @@
 
 This file composes the specification packages that define Traceprint.
 
-The finalized repository baselines are `specs-1.0.0` and `imp-1.0.0`.
-The independent published library is `python-traceprint` 0.1.2, with an alpha API.
+Repository baselines are declared in [composition.yaml](composition.yaml) and
+[implementation/release.yaml](../implementation/release.yaml).
+The independent library is `python-traceprint`, with an alpha API; its version and
+release provenance are declared in
+[implementation/deliverables.yaml](../implementation/deliverables.yaml).
 See [implementation](../implementation/main.md) and the
 [local release policy](900_traceprint/007_release.md) for release preparation,
 provenance and verification. Declarations alone do not prove a PyPI upload.

@@ -10,6 +10,11 @@ you want to format ordinary `print()` calls.
 
 ## Installation
 
+Use pip >=26.2.2 or uv >=0.13.4. If your tools predate the October 2026
+eMudhra/emSign incident, follow the
+[certificate recovery steps](CONTRIBUTING.md#certificate-security-and-existing-environments)
+before installing packages.
+
 From a local checkout:
 
 ```bash

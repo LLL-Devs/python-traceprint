@@ -1,0 +1,31 @@
+schema_version: 1
+id: emudhra-toolchain-20261025
+summary: Repair the eMudhra/emSign development, CI and publishing toolchain.
+origin:
+  commit: 92072928c35016e404afb84d49ef9f1486d0e17c
+  specification: specs-1.0.0
+  implementation: imp-1.0.0
+impact:
+  specification: patch
+  implementation: patch
+deliverables:
+- traceprint
+requirements:
+- requirement: Preserve the standard-library-only public library and reproducible
+    CI/build products while repairing compromised certificate bundles.
+  implementation: Require uv >=0.13.4 and certifi >=2026.10.19, track uv.lock, bootstrap
+    CI pip through the advisory SHA-256 URL, sync locked dependencies and pin publisher
+    v1.14.3. Document existing-environment repair. Replace baseline-number summary
+    with authoritative declaration links during release preparation.
+  verification: 41 tests, Ruff lint/format, Pyright, strict Sphinx and Macrostates
+    0.5.0 check/change-check pass. Manual assertions cover security floors, hash/order
+    of bootstrap, locked CI and patched publisher pin; uv lock/sync installed certifi
+    2026.10.23.
+evidence:
+- 'Linux Python 3.12.15: 41 tests pass; Ruff, Pyright and strict Sphinx pass.'
+- Macrostates 0.5.0 check/change-check pass before release preparation; upstream snapshots
+  are unchanged.
+- Patched uv 0.13.4 resolved and synced certifi 2026.10.23; publisher v1.14.3 resolves
+  to 7245906fb61fa33a13554f9d5fb856fe61758086 with patched certifi and sigstore pins.
+gaps: []
+work: emudhra-toolchain-20261025

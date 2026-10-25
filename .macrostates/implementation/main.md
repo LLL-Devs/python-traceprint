@@ -31,6 +31,10 @@ or installed specs. Source and wheel artifacts include MIT licensing; the wheel
 includes py.typed and has no runtime dependencies. docs/ contains Sphinx autodoc,
 usage and release guides. CI checks Linux Python 3.12–3.15 and Windows/macOS 3.12,
 quality, docs and artifacts; Pages deploys docs, and release.yml publishes via OIDC.
+The dev group requires certifi >=2026.10.19 and uv configuration requires
+uv >=0.13.4. Workflows bootstrap pip 26.2.2 through the advisory's hash-verified
+wheel before installing uv 0.13.4, sync locked dependencies and use the patched
+v1.14.3 publishing action. CONTRIBUTING.md describes environment recovery.
 
 ## Verification and provenance
 

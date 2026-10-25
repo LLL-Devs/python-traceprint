@@ -4,6 +4,10 @@ Usage guide
 Installation
 ------------
 
+Use pip >=26.2.2 or uv >=0.13.4. For older environments, follow the
+`certificate recovery steps <https://github.com/LLL-Devs/python-traceprint/blob/main/CONTRIBUTING.md#certificate-security-and-existing-environments>`_
+before installing packages.
+
 Install a local checkout with ``python -m pip install .``. For the public
 distribution, use ``python -m pip install python-traceprint``. Python imports remain
 ``traceprint``. To develop or build these docs, run ``uv sync --dev``.
