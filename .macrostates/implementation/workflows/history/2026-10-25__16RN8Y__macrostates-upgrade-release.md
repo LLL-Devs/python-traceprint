@@ -2,14 +2,14 @@
 
 - Project phase: active
 - Workflow type: Specification update; Implementation update; Release preparation; Integration preparation
-- Status: in_progress
-- Delivery state: awaiting_acceptance
+- Status: completed
+- Delivery state: accepted
 - Change depth: systemic
 - Branch: release/macrostates-0.1.4
 - Requested by: Definer
 - Implementer: AI-assisted implementation
 - Started at: 2026-10-25 11:17 UTC
-- Last updated at: 2026-10-25 11:17 UTC
+- Last updated at: 2026-10-25 11:22 UTC
 
 ## Technical objective and scope
 
@@ -43,19 +43,20 @@ impact, independently of the library's patch release identity.
 
 ## Remaining work
 
-Implementation and applicable local checks are complete. Explicit Definer
-acceptance and closure remain required before proposal submission. After closure,
-submit the candidate, require hosted checks/review, integrate and publish the
-annotated baseline/library tags and verified distribution through the release
-workflow. No remote proposal, integration or upload has occurred yet.
+No local implementation or qualification work remains. The accepted candidate
+is ready for proposal submission. Hosted checks/review, integration, annotated
+tag publication and package upload are subsequent authorized operations; their
+actual receipts belong in the remote review and release systems.
 
 ## Blockers and unresolved questions
 
-None identified during initial inspection. Workflow closure is not yet authorized.
+None. Workflow closure is authorized; hosted checks and publication remain
+separate gates and are not represented as already successful.
 
 ## Suggested next step
 
-Capture origin and install the published Process snapshot and CLI.
+Validate the closed candidate, submit its PR, require passing hosted checks,
+merge through the protected branch, then publish and verify the release.
 
 ## Local validation
 
@@ -73,8 +74,8 @@ neutral technical evidence; existing historical bytes are preserved.
 ## Candidate qualification
 
 Prepared the candidate against freshly fetched origin/main `76d2f86`. The plan proposes specs-2.0.0 / imp-2.0.0 and preserves
-all earlier consumed record hashes. Library 0.1.4 has independent provenance
-and tag v0.1.4. The declaration is a release candidate until reviewed integration;
+all earlier consumed record hashes. Library 0.1.4 declares independent provenance
+and source tag v0.1.4 for subsequent authorized publication. The declaration is a release candidate until reviewed integration;
 its status field alone does not establish an upload.
 
 Offline uv builds produced both artifacts, building the wheel from the source
@@ -102,3 +103,13 @@ and historical plan declarations without rewriting commits. Final release notes
 remain in the new pre-plan source, which is then replanned and prepared normally.
 This correction does not change impact, API, requirements or successful artifact
 results. No release identities were published during the rejected preparation.
+
+## Definer-confirmed closure
+
+On 2026-10-25 11:22 UTC, the Definer accepted the scoped
+Macrostates upgrade and locally verified library release candidate and explicitly
+authorized completing workflow 1 and proceeding with PR submission, merge after
+passing checks, and release 0.1.4. This closes local preparation; it does not claim
+that hosted validation, integration or upload has already occurred.
+
+- Closure authorized by: Definer — completed upgrade and local release preparation.
