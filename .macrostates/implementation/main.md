@@ -4,8 +4,9 @@ Project phase: active
 
 Traceprint is an MIT-licensed Python library for readable print and logging
 output. The public distribution is python-traceprint and imports remain traceprint.
-The initial snapshot uses specs-1.0.0 and imp-1.0.0; the independent library version
-is 0.1.2, with an alpha API. deliverables.yaml owns its version and tagged source.
+The release candidate uses specs-1.1.0 and imp-1.1.0; the independent library
+version is 0.1.3, with an alpha API. deliverables.yaml owns its version and tagged
+source. Reviewed integration finalizes these declarations.
 Publication is proven by external release files, not by a declaration alone.
 
 ## Architecture
@@ -31,6 +32,10 @@ or installed specs. Source and wheel artifacts include MIT licensing; the wheel
 includes py.typed and has no runtime dependencies. docs/ contains Sphinx autodoc,
 usage and release guides. CI checks Linux Python 3.12–3.15 and Windows/macOS 3.12,
 quality, docs and artifacts; Pages deploys docs, and release.yml publishes via OIDC.
+The dev group requires certifi >=2026.10.19 and uv configuration requires
+uv >=0.13.4. Workflows bootstrap pip 26.2.2 through the advisory's hash-verified
+wheel before installing uv 0.13.4, sync locked dependencies and use the patched
+v1.14.3 publishing action. CONTRIBUTING.md describes environment recovery.
 
 ## Verification and provenance
 

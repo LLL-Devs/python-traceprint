@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.1.3 — 2026-10-25
+
+- Mitigate the eMudhra/emSign CA incident in development and CI: require patched
+  uv and certifi, bootstrap pip from the advisory's hash-verified wheel, and
+  update the publishing action to its security release. Document recovery for
+  existing environments.
 
 - Expand the authoritative Macrostates specifications with detailed behavior,
   acceptance scenarios and consistent reading-order filenames.

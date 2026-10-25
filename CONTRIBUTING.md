@@ -1,9 +1,11 @@
 # Contributing
 
-Use Python 3.12 or later and [uv](https://docs.astral.sh/uv/). From a checkout:
+Use Python 3.12 or later and [uv](https://docs.astral.sh/uv/) 0.13.4 or later.
+Before installing dependencies, follow the certificate recovery steps below if
+your tools predate the October 2026 eMudhra/emSign incident. From a checkout:
 
 ```bash
-uv sync --dev
+uv sync --locked --dev
 ```
 
 Develop on a topic branch. Before implementation changes, read
@@ -11,6 +13,38 @@ Develop on a topic branch. Before implementation changes, read
 order and record the work under `.macrostates/implementation/`. Macrostates owns
 review, provenance and closure rules; upstream specification packages must stay
 unmodified. Keep changes focused and add regression tests for behavior fixes.
+
+## Certificate security and existing environments
+
+The [Python security advisory](https://discuss.python.org/t/109576) requires
+pip >=26.2.2, uv >=0.13.4 and certifi >=2026.10.19. Updating certifi or the OS
+trust store alone does not repair pip's vendored certificate bundle.
+
+In each Python environment that has pip, bootstrap the advisory's exact wheel
+and SHA-256 before fetching anything from an index:
+
+```bash
+python -m pip --disable-pip-version-check install --no-index --no-deps --no-cache-dir "pip @ https://files.pythonhosted.org/packages/3f/06/3e4420302363fbb71be3c7f35ce042f54bfca330e3e66b3a2e3c4cca579f/pip-26.2.2-py3-none-any.whl#sha256=fd7f4dfa8190e014013b9f08f3e973f4e4c26ffd179a204895533a7254813a70"
+python -m pip install --upgrade "certifi>=2026.10.19" "uv>=0.13.4"
+```
+
+Run these commands with that environment's Python, including newly created
+pip-seeded virtual environments. For a standalone uv installation, first update
+the OS certificate store using your platform's security updates, then run
+`UV_SYSTEM_CERTS=true uv self update` (POSIX shell). Verify `uv --version` before
+running `uv sync --locked --dev` to repair this checkout's `.venv`; uv normally
+creates it without pip. On macOS python.org installations, also update certifi
+using each framework installation's Python as described in the advisory.
+
+The committed `uv.lock` makes CI and contributor installs reproducible.
+The lockfile and dev dependency floor keep certifi patched for development;
+`tool.uv.required-version` rejects older uv. CI bootstraps patched pip before
+installing its pinned uv, uses locked dependencies, and pins the patched
+publishing action, whose container has its own dependency bundle. Rebuild any
+external container images with `--pull --no-cache` after updating their system
+certificates and Python tools. This repository has no container build definition.
+Traceprint's runtime remains standard-library-only; these repository changes do
+not update other virtual environments or the host's certificate store.
 
 ## Checks
 

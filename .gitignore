@@ -6,7 +6,6 @@ __pycache__/
 .ruff_cache/
 .mypy_cache/
 .pyright/
-uv.lock
 
 # Build outputs
 dist/
