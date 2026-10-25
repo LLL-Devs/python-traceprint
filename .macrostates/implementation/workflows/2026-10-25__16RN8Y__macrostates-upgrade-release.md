@@ -3,7 +3,7 @@
 - Project phase: active
 - Workflow type: Specification update; Implementation update; Release preparation; Integration preparation
 - Status: in_progress
-- Delivery state: implementing
+- Delivery state: awaiting_acceptance
 - Change depth: systemic
 - Branch: release/macrostates-0.1.4
 - Requested by: Definer
@@ -43,9 +43,11 @@ impact, independently of the library's patch release identity.
 
 ## Remaining work
 
-Bind the release plan, prepare candidate artifacts and obtain explicit closure
-before proposal submission.
-Hosted review/integration, tag publication and package upload follow local closure.
+Implementation and applicable local checks are complete. Explicit Definer
+acceptance and closure remain required before proposal submission. After closure,
+submit the candidate, require hosted checks/review, integrate and publish the
+annotated baseline/library tags and verified distribution through the release
+workflow. No remote proposal, integration or upload has occurred yet.
 
 ## Blockers and unresolved questions
 
@@ -67,3 +69,26 @@ On Linux Python 3.12.15, all 41 tests pass. Ruff lint/format, Pyright, strict
 Sphinx HTML, Macrostates check and change-check pass. Artifact checks and hosted
 platform checks remain pending. New retained records use role attribution and
 neutral technical evidence; existing historical bytes are preserved.
+
+## Candidate qualification
+
+Prepared the bound candidate from upgrade commit `95c2cc3` against freshly fetched
+origin/main `76d2f86`. The plan proposes specs-2.0.0 / imp-2.0.0 and preserves
+all earlier consumed record hashes. Library 0.1.4 has independent provenance
+and tag v0.1.4. The declaration is a release candidate until reviewed integration;
+its status field alone does not establish an upload.
+
+Offline uv builds produced both artifacts, building the wheel from the source
+distribution without original Git ancestry. Strict Twine, isolated installation,
+metadata/license/type-marker checks and both examples pass. Structured YAML
+parses; artifact inventories exclude local environments/backups/generated docs;
+six generated HTML documents contain no checkout-location disclosure. Strict
+Sphinx was rerun for version 0.1.4. Macrostates check/change-check and diff checks
+pass. Hosted matrix tests and post-integration publication provenance remain
+separate required gates.
+
+Reviewed newly authored records and retained artifacts against Process 6's
+public document contract. Necessary public upstream provenance and legal notices
+remain accurate; existing historical records were not rewritten. There are no
+other independently composed or vendored package contexts in the tracked project
+requiring an update suggestion. Local private backup trees are outside scope.
